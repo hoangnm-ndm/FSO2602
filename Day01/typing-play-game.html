@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0db9f2",
+              "background-light": "#f5f8f8",
+              "background-dark": "#101e22",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .typing-cursor {
+        border-left: 2px solid #0db9f2;
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: #0db9f2;
+        }
+      }
+      .text-untyped {
+        color: #4b5563;
+      }
+      .text-correct {
+        color: #f1f5f9;
+      }
+      .text-incorrect {
+        color: #ef4444;
+        border-bottom: 1px solid #ef4444;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between border-b border-slate-200 dark:border-primary/20 px-6 py-4 lg:px-20"
+        >
+          <div class="flex items-center gap-3">
+            <div class="text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-3xl">keyboard</span>
+            </div>
+            <h2
+              class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight"
+            >
+              TypeMaster
+            </h2>
+          </div>
+          <div class="flex items-center gap-6">
+            <div
+              class="hidden md:flex items-center gap-4 text-sm font-medium text-slate-500 dark:text-slate-400"
+            >
+              <span class="hover:text-primary cursor-pointer transition-colors"
+                >Leaderboard</span
+              >
+              <span class="hover:text-primary cursor-pointer transition-colors"
+                >Settings</span
+              >
+              <span class="hover:text-primary cursor-pointer transition-colors"
+                >About</span
+              >
+            </div>
+            <div
+              class="bg-primary/10 p-1 rounded-full border border-primary/20"
+            >
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8"
+                data-alt="User profile avatar gradient pattern"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhWMOpVVqyg73LDUh3D7dNnAbqVlwAgyP8uCIiPPMCNvWQ5KrfhHlhE30ENjMW3exT7WIJVCFIr-8UnV9GP29Wl77WLnsFZPEbDLuxBnfQNg9JOvQKFjqrq54xttDxINUcR5rJInaYeRD8apN7M1WrtikGWvstKUedz6m9U8VlGaD_pKdnBkAT0OSjllDh3aH8BVDyj409yxEzaFUJoZYGVzMkk20WQcaDGMcPuPswM6yGi-NDD1YSuL4Z1QGpOufQTlu4w8qkksU');
+                "
+              ></div>
+            </div>
+          </div>
+        </header>
+        <main
+          class="flex-1 flex flex-col items-center justify-center max-w-5xl mx-auto w-full px-6 py-12"
+        >
+          <div
+            class="w-full flex flex-col md:flex-row items-center justify-between gap-8 mb-12"
+          >
+            <div class="flex flex-col items-center md:items-start gap-1">
+              <p
+                class="text-primary text-xs font-bold uppercase tracking-widest"
+              >
+                Time Remaining
+              </p>
+              <div class="flex items-baseline gap-1">
+                <span
+                  class="text-5xl font-mono font-bold text-slate-900 dark:text-slate-100"
+                  >00:45</span
+                >
+                <span class="text-slate-400 text-lg font-mono">s</span>
+              </div>
+            </div>
+            <div
+              class="flex gap-4 md:gap-8 bg-slate-100 dark:bg-primary/5 p-6 rounded-xl border border-slate-200 dark:border-primary/10"
+            >
+              <div class="flex flex-col items-center">
+                <p
+                  class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider mb-1"
+                >
+                  WPM
+                </p>
+                <p class="text-3xl font-mono font-bold text-primary">74</p>
+              </div>
+              <div
+                class="w-px bg-slate-200 dark:bg-primary/20 h-10 self-center"
+              ></div>
+              <div class="flex flex-col items-center">
+                <p
+                  class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider mb-1"
+                >
+                  Accuracy
+                </p>
+                <p
+                  class="text-3xl font-mono font-bold text-slate-900 dark:text-slate-100"
+                >
+                  98<span class="text-sm ml-0.5">%</span>
+                </p>
+              </div>
+              <div
+                class="w-px bg-slate-200 dark:bg-primary/20 h-10 self-center"
+              ></div>
+              <div class="flex flex-col items-center">
+                <p
+                  class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider mb-1"
+                >
+                  Characters
+                </p>
+                <p
+                  class="text-3xl font-mono font-bold text-slate-900 dark:text-slate-100"
+                >
+                  342
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative w-full mb-12">
+            <div
+              class="font-mono text-2xl leading-relaxed text-left selection:bg-primary/30 max-w-4xl mx-auto"
+            >
+              <span class="text-correct">The</span>
+              <span class="text-correct">quick</span>
+              <span class="text-correct">brown</span>
+              <span class="text-correct">fox</span>
+              <span class="text-correct">jumps</span>
+              <span class="text-correct">over</span>
+              <span class="text-correct">the</span>
+              <span class="text-correct">lazy</span>
+              <span class="text-correct">dog.</span>
+              <span class="text-correct">Programming</span>
+              <span class="text-correct">is</span>
+              <span class="text-correct">the</span>
+              <span class="text-incorrect">arrt</span>
+              <span class="text-untyped typing-cursor">of</span>
+              <span class="text-untyped">algorithm</span>
+              <span class="text-untyped">design</span>
+              <span class="text-untyped">and</span>
+              <span class="text-untyped">the</span>
+              <span class="text-untyped">craft</span>
+              <span class="text-untyped">of</span>
+              <span class="text-untyped">debugging</span>
+              <span class="text-untyped">errant</span>
+              <span class="text-untyped">code.</span>
+              <span class="text-untyped">Focus</span>
+              <span class="text-untyped">on</span>
+              <span class="text-untyped">every</span>
+              <span class="text-untyped">keystroke</span>
+              <span class="text-untyped">to</span>
+              <span class="text-untyped">maximize</span>
+              <span class="text-untyped">your</span>
+              <span class="text-untyped">efficiency</span>
+              <span class="text-untyped">and</span>
+              <span class="text-untyped">maintain</span>
+              <span class="text-untyped">perfect</span>
+              <span class="text-untyped">flow.</span>
+            </div>
+            <textarea
+              autofocus=""
+              class="absolute inset-0 w-full h-full opacity-0 cursor-default"
+              spellcheck="false"
+            ></textarea>
+          </div>
+          <div class="flex flex-col items-center gap-6">
+            <button
+              class="flex items-center gap-2 px-6 py-2 rounded-lg bg-slate-100 dark:bg-primary/10 text-slate-600 dark:text-slate-300 hover:bg-primary/20 hover:text-primary transition-all group"
+            >
+              <span
+                class="material-symbols-outlined transition-transform group-hover:rotate-180"
+                >refresh</span
+              >
+              <span class="text-sm font-semibold uppercase tracking-widest"
+                >Restart (Esc)</span
+              >
+            </button>
+            <div
+              class="flex items-center gap-2 text-slate-500 dark:text-slate-500 text-xs"
+            >
+              <kbd
+                class="px-2 py-1 bg-slate-200 dark:bg-primary/10 rounded border border-slate-300 dark:border-primary/20"
+                >Tab</kbd
+              >
+              <span>+</span>
+              <kbd
+                class="px-2 py-1 bg-slate-200 dark:bg-primary/10 rounded border border-slate-300 dark:border-primary/20"
+                >Enter</kbd
+              >
+              <span>to quickly restart</span>
+            </div>
+          </div>
+        </main>
+        <footer
+          class="mt-auto py-8 px-6 flex flex-col md:flex-row justify-center items-center gap-8 text-slate-400 text-sm"
+        >
+          <div class="flex items-center gap-6">
+            <div
+              class="flex items-center gap-1.5 hover:text-primary cursor-pointer transition-colors"
+            >
+              <span class="material-symbols-outlined text-lg">code</span>
+              <span>Github</span>
+            </div>
+            <div
+              class="flex items-center gap-1.5 hover:text-primary cursor-pointer transition-colors"
+            >
+              <span class="material-symbols-outlined text-lg">chat</span>
+              <span>Discord</span>
+            </div>
+            <div
+              class="flex items-center gap-1.5 hover:text-primary cursor-pointer transition-colors"
+            >
+              <span class="material-symbols-outlined text-lg">palette</span>
+              <span>Theme</span>
+            </div>
+          </div>
+          <div
+            class="hidden md:block w-px h-4 bg-slate-200 dark:bg-primary/20"
+          ></div>
+          <div class="flex items-center gap-4">
+            <span
+              class="bg-primary/20 text-primary px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider italic"
+              >Beta v2.4</span
+            >
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới thiệu Bản Thân</title>
+    <style>
+      /* global resets and typography */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #ece9e6 0%, #ffffff 100%);
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 800px;
+        padding: 30px 40px;
+        background: #fff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      img.profile {
+        display: block;
+        margin: 0 auto 2rem auto;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 4px solid #4d79ff;
+      }
+
+      section {
+        margin-bottom: 1.8rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+        border-bottom: 2px solid #4d79ff;
+        padding-bottom: 0.3rem;
+        margin-bottom: 0.6rem;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      /* animation effects for headings */
+      @keyframes colorchange {
+        0% {
+          color: #ff4d4d;
+        }
+        25% {
+          color: #4d79ff;
+        }
+        50% {
+          color: #4dff4d;
+        }
+        75% {
+          color: #ff4dff;
+        }
+        100% {
+          color: #ff4d4d;
+        }
+      }
+
+      h1,
+      h2 {
+        animation: colorchange 5s infinite alternate;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+
+      h1 {
+        animation: colorchange 5s infinite alternate, bounce 2s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Chào mừng đến với trang giới thiệu của tôi!</h1>
+      <img
+        class="profile"
+        src="https://fastly.picsum.photos/id/1/5000/3333.jpg?hmac=Asv2DU3rA_5D1xSe22xZK47WEAN0wjWeFOhzd13ujW4"
+        alt="Ảnh đại diện"
+      />
+
+      <section>
+        <h2>Thông Tin Cá Nhân</h2>
+        <p>
+          Xin chào, tôi là Bùi Phương Nam. Tôi là một lập trình viên đam mê công
+          nghệ và phát triển phần mềm. Hiện tại, tôi là học viên của CodeFarm -
+          một workspace học lập trình hiệu quả mô phỏng lại môi trường làm việc
+          tại các tập đoàn công nghệ.
+        </p>
+      </section>
+
+      <section>
+        <h2>Kinh Nghiệm</h2>
+        <p>
+          Tôi có kinh nghiệm làm việc với nhiều công nghệ khác nhau, bao gồm
+          HTML, CSS, Java và MYSQL. Tôi thích làm việc trong môi trường sáng tạo
+          và luôn tìm cách cải thiện kỹ năng của mình.
+        </p>
+      </section>
+
+      <section>
+        <h2>Sở Thích</h2>
+        <p>
+          Khi không làm việc, tôi thích đọc sách, xem phim. Tôi cũng thích khám
+          phá các công nghệ mới và tham gia các dự án mã nguồn mở.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
