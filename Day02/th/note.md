@@ -1,7 +1,7 @@
 # TH Day 02
 
 1. Đăng ký tài khoản Figma, tải figma về và cài đặt.
-   `https://www.figma.com/downloads/https://www.figma.com/downloads/`
+   `https://www.figma.com/downloads`
 2. Khi sử dụng đề, ấn file -> duplicate để tạo bản sao của đề về tài khoản của mình.
    ![alt text](image.png)
 3. Tìm hiểu về Figma, cách sử dụng, các công cụ cơ bản.
