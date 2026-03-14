@@ -1,0 +1,12 @@
+.btn {
+	/* Bố cục, kích thước, màu sắc */
+	padding: 12px 24px;
+	border: 1px solid #ccc;
+	border-radius: 12px;
+	min-width: 68px;
+	background-color: #888;
+
+	/* font */
+	font-size: 18px;
+	font-weight: bold;
+}

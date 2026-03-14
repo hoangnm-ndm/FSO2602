@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../Login.css" />
+		<title>Document</title>
+
+		<style>
+			html {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			* {
+				box-sizing: border-box;
+			}
+			.Login_group {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin: auto;
+				gap: 24px;
+				width: 350px;
+				height: 334px;
+				padding: 24px;
+			}
+
+			h2 {
+				width: 59px;
+				height: 28px;
+				font-size: 24px;
+			}
+
+			form {
+				width: 320px;
+				height: 282px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				padding: 24px;
+				border-radius: 8px;
+				background-color: aliceblue;
+			}
+
+			.email,
+			.password {
+				width: 300px;
+				height: 56px;
+				display: flex;
+				flex-direction: column;
+				align-self: start;
+				gap: 8px;
+				margin: auto;
+			}
+
+			button {
+				width: 272px;
+				height: 34px;
+				padding: 8px;
+				margin: auto;
+				border-radius: 8px;
+				background-color: #0088ff;
+				color: #f9f9f9;
+				font-size: 16px;
+				border: 0 solid #0088ff;
+			}
+			label {
+				width: 272px;
+				height: 16px;
+				font-size: 14px;
+			}
+
+			.input {
+				width: 272px;
+				height: 32px;
+				padding: 8px;
+				opacity: 72%;
+				border-radius: 8px;
+				background-color: #f9f9f9;
+			}
+
+			.pass_forgotPass {
+				/* Cách đặt tên chưa chuẩn */
+
+				/* Cách đặt tên chuẩn trong CSS là kebab-case, thi thoảng sử dụng __ */
+				width: 272px;
+				height: 16px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.pass_forgotPass,
+			a {
+				white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="Login_group">
+			<div class="Login">
+				<h2>Login</h2>
+			</div>
+
+			<form action="">
+				<div class="email">
+					<label for="email">Email</label>
+					<input class="input" type="email" placeholder="example@gmail.com" />
+				</div>
+				<div class="password">
+					<div class="pass_forgotPass">
+						<label for="password">Password</label>
+						<a
+							style="
+								width: 113px;
+								height: 16px;
+								color: #007aff;
+								text-decoration: none;
+								font-size: 14px;
+							"
+							href="../index.html"
+							>Forgot password?</a
+						>
+					</div>
+					<input class="input" type="password" placeholder="Your password" />
+				</div>
+				<button>Login</button>
+				<p style="width: 272px; height: 16px; font-size: 14px">
+					Don't have account?
+					<a style="color: #007aff; text-decoration: none" href="../index.html"
+						>Create new account</a
+					>
+				</p>
+			</form>
+		</div>
+	</body>
+</html>

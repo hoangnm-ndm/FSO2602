@@ -1,0 +1,6 @@
+form {
+	border: 2px solid red;
+	button {
+		background-color: yellow;
+	}
+}

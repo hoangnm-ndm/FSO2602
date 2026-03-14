@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Form</title>
+		<link rel="stylesheet" href="./ex02.css" />
+		<!--  -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+		/>
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- * Các đơn vị đo tuyệt đối  thường được chọn dùng số chẵn và nếu tốt nhất có thể chia hết cho 4 -->
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			body {
+				font-family: "Poppins", sans-serif;
+				background-color: #f9f9f9cc;
+			}
+
+			.title {
+				font-weight: 400;
+				font-size: 24px;
+				text-align: center;
+				margin-top: 40px;
+				background-color: #f9f9f9cc;
+				margin-bottom: 10px;
+			}
+
+			.login-form {
+				width: 320px;
+				height: 300px;
+				margin-left: 39%;
+				background-color: #fff;
+				border-radius: 10px;
+				box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+			}
+
+			.email-form {
+				padding-top: 20px;
+				padding-left: 10%;
+			}
+
+			.email-form label {
+				display: block;
+				font-weight: 400;
+				font-size: 14px;
+			}
+
+			.email-form input {
+				display: block;
+				width: 255px;
+				height: 32px;
+				padding-left: 5px;
+				border: 1px solid #a9a7a7;
+				border-radius: 5px;
+				background-color: #f9f9f9cc;
+				margin-top: 5px;
+			}
+
+			.password-form {
+				padding-top: 20px;
+				padding-left: 10%;
+			}
+
+			.password-form label {
+				display: inline-block;
+				font-weight: 400;
+				font-size: 14px;
+			}
+
+			.password-form span {
+				display: inline-block;
+				margin-left: 70px;
+				font-weight: 400;
+				font-size: 14px;
+				color: #007aff;
+				cursor: pointer;
+			}
+
+			.password-form span:hover {
+				opacity: 0.7;
+			}
+
+			.password-form input {
+				display: block;
+				width: 255px;
+				height: 32px;
+				padding-left: 5px;
+				border: 1px solid #a9a7a7;
+				border-radius: 5px;
+				background-color: #f9f9f9cc;
+				margin-top: 5px;
+			}
+
+			.btn {
+				display: block;
+				margin-top: 30px;
+				width: 255px;
+				height: 34px;
+				margin-left: 10%;
+				border-radius: 10px;
+				border: none;
+				background-color: #1c8eeb;
+				font-size: 16px;
+				font-weight: 700;
+				color: #fff;
+				cursor: pointer;
+			}
+
+			.btn:hover {
+				opacity: 0.9;
+			}
+
+			.btn-group {
+				padding-top: 10px;
+				margin-left: 10%;
+				font-weight: 300;
+				font-size: 12px;
+			}
+
+			.btn-group .btn-register {
+				font-weight: 400;
+				cursor: pointer;
+				color: #007aff;
+			}
+
+			.btn-group .btn-register:hover {
+				opacity: 0.7;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Dùng heading vượt cấp -->
+		<h2 class="title">Login</h2>
+
+		<div class="login-form">
+			<!-- form nhưng không dùng form mà dùng div -->
+			<div class="email-form">
+				<label for="email">Email</label>
+				<input
+					type="text"
+					id="email"
+					name="email"
+					placeholder="example@email.com"
+				/>
+			</div>
+			<div class="password-form">
+				<label for="password">Password</label>
+				<span>Forgot password?</span>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					placeholder="************"
+				/>
+			</div>
+			<div class="password-form">
+				<label for="password">Password</label>
+				<span>Forgot password?</span>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					placeholder="************"
+				/>
+			</div>
+			<button class="btn">Login</button>
+			<div class="btn-group">
+				<span class="btn-extra">Don’t have account?</span>
+				<span class="btn-register"
+					>Create new account Lorem ipsum dolor sit amet consectetur adipisicing
+					elit. Provident, cupiditate.</span
+				>
+			</div>
+		</div>
+	</body>
+</html>

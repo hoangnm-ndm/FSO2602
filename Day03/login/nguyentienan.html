@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../reset.css" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Login Form</title>
+
+		<style>
+			@font-face {
+				font-family: "Helvetica";
+				src: url("./fonts/HelveticaNeueRoman.otf") format("opentype");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			@font-face {
+				font-family: "Helvetica";
+				src: url("./fonts/HelveticaNeueBold.otf") format("opentype");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			:root {
+				--primary-color: #111;
+				--color-background: rgba(249, 249, 249, 0.8);
+			}
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				line-height: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				background: var(--color-background);
+				font-family: "Helvetica", Arial, sans-serif;
+			}
+			.container {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+				width: 20rem;
+			}
+
+			.title {
+				color: var(--primary-color);
+				text-align: center;
+				font-size: 1.5rem;
+				font-weight: 400;
+				line-height: normal;
+			}
+
+			.form-container {
+				background-color: #fff;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				border-radius: 0.5rem;
+			}
+
+			.form-wrapper {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+				padding: 1.5rem;
+				width: 100%;
+				justify-content: flex-start;
+			}
+
+			.form {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+			}
+
+			.form-group {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+			}
+
+			.label label {
+				color: var(--primary-color);
+				font-size: 0.875rem;
+				font-weight: 400;
+				line-height: normal;
+			}
+
+			.form-group input {
+				padding: 0.5rem;
+				border-radius: 0.25rem;
+				border: 1px solid #d9d9d9;
+				background: var(--color-background);
+			}
+
+			.label.password {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			.forget-password-link {
+				color: #007aff;
+				font-size: 0.875rem;
+				font-weight: 400;
+				line-height: normal;
+			}
+
+			.submit-btn {
+				padding: 0.5rem;
+				color: #fff;
+				border-radius: 0.5rem;
+				background: #08f;
+				font-size: 1rem;
+				font-weight: 700;
+				line-height: normal;
+				border: none;
+				cursor: pointer;
+			}
+
+			.signup-redirect {
+				color: var(--primary-color);
+				font-size: 0.875rem;
+				font-weight: 400;
+				line-height: normal;
+			}
+
+			.signup-redirect a {
+				color: #007aff;
+			}
+
+			input::placeholder {
+				color: #111;
+				font-size: 0.875rem;
+				font-weight: 400;
+				line-height: normal;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<section class="container">
+				<h1 class="title">Login</h1>
+				<div class="form-container">
+					<div class="form-wrapper">
+						<form action="#" method="post" class="form">
+							<div class="form-group">
+								<div class="label">
+									<label for="email">Email</label>
+								</div>
+								<input
+									type="email"
+									name="email"
+									id="email"
+									placeholder="example@gmail.com"
+								/>
+							</div>
+							<div class="form-group">
+								<div class="label password">
+									<label for="password">Password</label>
+									<a href="" class="forget-password-link">Forgot password?</a>
+								</div>
+								<input
+									type="password"
+									name="password"
+									id="password"
+									placeholder="*********"
+								/>
+							</div>
+							<button type="submit" class="submit-btn">Login</button>
+						</form>
+						<p class="signup-redirect">
+							Don’t have account?
+							<a href="#">Create new account</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

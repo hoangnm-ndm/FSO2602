@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<!-- * Cách 2: Viết CSS vào thẻ style và dùng bộ chọn (CSS selector) để chọn phần tử HTML muốn tạo kiểu -->
+
+		<!-- * Cách 2 này tiết kiệm số lượng file nhưng sẽ khiến file HTML khá dài, và CSS này không dùng chung với file HTML khác dk -->
+
+		<link rel="stylesheet" href="./ex01.css" />
+		<style>
+			.description {
+				background-color: violet;
+			}
+
+			/* .btn-big {
+				padding: 12px 24px;
+			} */
+
+			/* 
+        comment o day
+        dong 2 o day
+        comment dung de:
+
+        1. Tạm thời dừng áp dụng mã CSS.
+        2. Chú thích cho mã CSS.
+      */
+
+			/* * ctrl + / */
+
+			input {
+				background-color: yellow;
+			}
+		</style>
+		<!-- user agent stylesheet: là kiểu mà trình duyệt tự áp dụng lên phần tử HTML -->
+
+		<link rel="stylesheet" href="./button.css" />
+
+		<!-- * Cách 3: tách CSS ra file riêng và liên kết vào HTML thông qua link -->
+
+		<!-- * File HTML không quá dài, và CSS có thể chia sẻ, cung cấp nhiều file HTML với nhau -->
+	</head>
+	<body>
+		<h1>Mau Xanh</h1>
+		<button class="btn" style="background-color: red">Click me ex01</button>
+		<h2 class="description">tieu de the h2</h2>
+
+		<input type="text" placeholder="email..." />
+		<!-- * Cach 1: Viết vào thẻ mở của html thông qua thuộc tính style -->
+		<!-- Cách viết này có độ ưu tiên giá trị thuộc tính cao nhất -->
+		<!-- element.style -->
+		<p
+			class="description"
+			style="color: red; border: 3px solid blue; font-weight: 900"
+		>
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, nam.
+		</p>
+
+		<p style="color: red; border: 3px solid blue; font-weight: 900">
+			Lorem ipsum dolor sit.
+		</p>
+
+		<p style="color: red; border: 3px solid blue; font-weight: 900">
+			Lorem ipsum dolor sit.
+		</p>
+		<img
+			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6t5FdJANrWj65CYTMOhwrNnb1dGz5-obsHlbbE_nJqwNwzcCGt8oF6_C4qkFItNF-1gQmbDM-JBTXw47z75CWJpyyYBf5tu77RlARKg&s=10"
+			alt=""
+			style="width: auto; height: 200px"
+		/>
+
+		<button>"nut so 01"</button><button class="btn btn-big">"nut so 02"</button
+		><button>"nut so 03"</button>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae doloribus
+			natus exercitationem, animi non hic! Possimus quis nisi quaerat qui
+			incidunt ducimus. Ipsum expedita optio quibusdam saepe aspernatur
+			repudiandae dolores!
+		</p>
+		<!-- self closing tags -->
+	</body>
+</html>
