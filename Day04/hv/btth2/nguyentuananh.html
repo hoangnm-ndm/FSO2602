@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top {
+            width: 0px;
+            border: 50px solid #fff;
+            border-bottom-color: red;
+        }
+
+        .bottom {
+            width: 0px;
+            border: 50px solid #fff;
+            border-top-color: red;
+        }
+
+        .clock {
+            width: 0px;
+            border: 50px solid #fff;
+            border-top-color: red;
+            border-bottom-color: red;
+        }
+
+        .container {
+            margin-top: 50px;
+
+            .block-1 {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+
+            .block-2 {
+                display: inline-block;
+                width: 0px;
+                border: 50px solid #fff;
+                border-left-color: red;
+                margin-left: -4px;
+            }
+        }
+
+        .container-2 {
+            margin-top: 50px;
+
+            .block-3 {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                border-radius: 0 50px 50px 0;
+            }
+
+            .block-4 {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                border-radius: 50px 0 0 50px;
+                margin-left: -4px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- * bai 1 -->
+    <div class="top"></div>
+    <div class="bottom"></div>
+
+    <!-- * bai 2 -->
+    <div class="clock"></div>
+
+    <!-- * bai 3 -->
+    <div class="container">
+        <span class="block-1"></span>
+        <span class="block-2"></span>
+    </div>
+
+    <!-- * bai 4 -->
+    <div class="container-2">
+        <span class="block-3"></span>
+        <span class="block-4"></span>
+    </div>
+</body>
+
+</html>

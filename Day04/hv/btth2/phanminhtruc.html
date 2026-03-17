@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				/* padding: 0;
+            margin: 0; */
+			}
+
+			.mt-32 {
+				margin-top: 32px;
+			}
+
+			.diamond {
+				width: 0;
+				height: 0;
+				border-left: 60px solid transparent;
+				border-right: 60px solid transparent;
+				border-bottom: 60px solid green;
+			}
+
+			.diamond1 {
+				width: 0;
+				height: 0;
+				border-left: 60px solid transparent;
+				border-right: 60px solid transparent;
+				border-top: 60px solid green;
+			}
+
+			.diamond2 {
+				width: 0;
+				height: 0;
+				border-left: 60px solid transparent;
+				border-right: 60px solid transparent;
+				border-top: 60px solid green;
+			}
+
+			.diamond3 {
+				width: 0;
+				height: 0;
+				border-left: 60px solid transparent;
+				border-right: 60px solid transparent;
+				border-bottom: 60px solid green;
+			}
+
+			.pic-group {
+				display: flex;
+				align-items: center;
+				/* Chưa được dạy */
+
+				.pic {
+					width: 100px;
+					height: 80px;
+					background-color: green;
+				}
+
+				.pic-1 {
+					width: 0;
+					height: 0;
+					border-top: 40px solid transparent;
+					border-bottom: 40px solid transparent;
+					border-left: 40px solid green;
+				}
+			}
+
+			.pic-3 {
+				width: 100px;
+				height: 100px;
+				background-color: green;
+				border-top-right-radius: 50%;
+				border-bottom-right-radius: 50%;
+			}
+
+			.pic-4 {
+				width: 100px;
+				height: 100px;
+				background-color: green;
+				border-top-left-radius: 50%;
+				border-bottom-left-radius: 50%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<div class="diamond"></div>
+			<div class="diamond1"></div>
+		</div>
+		<div class="mt-32">
+			<div class="diamond2"></div>
+			<div class="diamond3"></div>
+		</div>
+		<div class="mt-32 pic-group">
+			<div class="pic"></div>
+			<div class="pic-1"></div>
+		</div>
+		<div class="mt-32 pic-group">
+			<div class="pic-3"></div>
+			<div class="pic-4"></div>
+		</div>
+	</body>
+</html>

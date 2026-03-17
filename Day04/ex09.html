@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(3, 100px);
+				grid-template-rows: repeat(2, 100px);
+				grid-gap: 10px;
+				width: 340px;
+				background-color: violet;
+			}
+
+			.box {
+				width: 100%;
+				height: 100%;
+				background-color: violet;
+				box-shadow: 0 10px violet, 120px 10px violet, 230px 10px violet,
+					10px 120px purple, 120px 120px purple, 230px 120px purple;
+			}
+		</style>
+		<div class="grid">
+			<div class="box"></div>
+		</div>
+	</body>
+</html>

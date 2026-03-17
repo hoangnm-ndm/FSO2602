@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+			p {
+				width: 100px;
+				height: 100px;
+				background-color: yellowgreen;
+			}
+
+			.p1 {
+				margin-bottom: 20px;
+			}
+
+			.p2 {
+				margin-top: 40px;
+			}
+
+			/* margin về bản chất là khoảng cách được thiết lập để tách phần tử HTML với các phần tử cạnh nó - nó không có ý nghĩa dùng để hiển thị nội dung -> vì vậy collapse là tính năng của margin, ko phải bug. */
+
+			.parent {
+				background-color: violet;
+				width: 200px;
+				height: 200px;
+				margin-top: 40px;
+				/* border: 3px dashed red; */
+
+				.child {
+					background-color: yellow;
+					width: 100px;
+					height: 100px;
+
+					margin-top: 30px;
+					/* border: 3px dashed red; */
+				}
+			}
+
+			.empty-box {
+				margin: 50px 0;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- * Margin collapse: gộp -->
+
+		<p class="p1">noi dung - 01</p>
+		<p class="p2">noi dung - 02</p>
+
+		<div class="parent">
+			<span>Tôi chen vào giữa 2 cha con</span>
+			<div class="child">Child</div>
+		</div>
+
+		Nội dung phía trên
+		<div class="empty-box"></div>
+		Nội dung phía dưới
+	</body>
+</html>

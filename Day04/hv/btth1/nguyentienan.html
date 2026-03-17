@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>S-Shape Semi Circles</title>
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				background-color: #f0f0f0;
+				margin: 0;
+			}
+
+			.shape-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.semi-circle {
+				width: 200px;
+				height: 100px;
+				background-color: red;
+				border: 2px solid red;
+			}
+
+			.top {
+				border-bottom: none;
+				border-radius: 100px 100px 0 0;
+				transform: translateX(-50px);
+			}
+
+			.bottom {
+				border-top: none;
+				border-radius: 0 0 100px 100px;
+				transform: translateX(50px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="shape-container">
+			<div class="semi-circle top"></div>
+			<div class="semi-circle bottom"></div>
+		</div>
+	</body>
+</html>

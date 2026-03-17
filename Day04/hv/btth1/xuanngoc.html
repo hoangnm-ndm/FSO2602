@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Half Circle Shape</title>
+		<style>
+			body {
+				background: #eee;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+			}
+
+			.container {
+				position: relative;
+				width: 300px;
+				height: 200px;
+			}
+
+			.top {
+				width: 150px;
+				height: 75px;
+				background: red;
+				border-radius: 75px 75px 0 0;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			.bottom {
+				width: 150px;
+				height: 75px;
+				background: red;
+				border-radius: 0 0 75px 75px;
+				position: absolute;
+				left: 120px;
+				top: 40px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="top"></div>
+			<div class="bottom"></div>
+		</div>
+	</body>
+</html>
