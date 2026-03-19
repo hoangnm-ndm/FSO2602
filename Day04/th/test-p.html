@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Fit Text 100vh</title>
+		<style>
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+			}
+
+			#text {
+				height: 100vh;
+				width: 100vw;
+				margin: 0;
+				overflow: hidden;
+
+				display: flex;
+				align-items: center;
+
+				word-break: break-word;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="text">Nội dung rất dài rất dài rất dài rất dài rất dài rất dài...</p>
+
+		<script>
+			function fitText(el, min = 10, max = 300) {
+				let low = min;
+				let high = max;
+				let best = min;
+				const h = el.clientHeight;
+				const w = el.clientWidth;
+
+				while (low <= high) {
+					const mid = (low + high) >> 1;
+					el.style.fontSize = mid + "px";
+
+					if (el.scrollHeight <= h && el.scrollWidth <= w) {
+						best = mid;
+						low = mid + 1;
+					} else {
+						high = mid - 1;
+					}
+				}
+
+				el.style.fontSize = best + "px";
+			}
+
+			const el = document.getElementById("text");
+
+			function run() {
+				fitText(el);
+			}
+
+			let t;
+			window.addEventListener("resize", () => {
+				clearTimeout(t);
+				t = setTimeout(run, 100);
+			});
+
+			window.addEventListener("load", run);
+		</script>
+	</body>
+</html>

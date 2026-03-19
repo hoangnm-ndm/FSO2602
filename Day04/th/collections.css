@@ -1,0 +1,49 @@
+/* ! HEADER: BEGIN */
+
+body {
+	padding: 62px;
+	background-color: #eff0f1;
+}
+
+header {
+	width: 100%;
+	h1 {
+		font-size: 32px;
+		margin-bottom: 24px;
+	}
+	.nav {
+		margin-bottom: 56px;
+		gap: 8px;
+		.nav-item {
+			background-color: #fff;
+			font-weight: 500;
+			border-radius: 8px;
+		}
+
+		button {
+			padding: 10px;
+		}
+	}
+}
+/* ! HEADER: END */
+
+/* ! COLLECTION: BEGIN*/
+
+.collection-list {
+	gap: 64px;
+	.collection-card {
+		flex: 1 437px;
+		padding: 24px;
+		border-radius: 32px;
+		background-color: #fff;
+
+		.sub-thumbnail {
+			margin-bottom: 24px;
+		}
+	}
+
+	.sub-thumbnail {
+		padding-top: 16px;
+	}
+}
+/* ! COLLECTION: END*/

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Collection List</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+			integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- COMMON CSS -->
+		<link rel="stylesheet" href="../../common.css" />
+
+		<link rel="stylesheet" href="./collections.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Popular Collections</h1>
+			<ul class="nav flex-start">
+				<!-- * Sau này đây là data -> dùng 1 vòng lặp (loop) để giải quyết vấn đề -->
+				<li class="nav-item"><button href="">Profile</button></li>
+				<li class="nav-item"><button href="">New York</button></li>
+				<li class="nav-item"><button href="">Relaxing</button></li>
+				<li class="nav-item"><button href="">Person</button></li>
+				<li class="nav-item"><button href="">Fashion</button></li>
+			</ul>
+		</header>
+		<main>
+			<div class="collection-list flex-between">
+				<!-- * các dữ liệu lấy từ API -> sử dụng data -->
+				<div class="collection-card">
+					<div class="main-thumbnail">
+						<img src="./imgs/main-thumbnail.jpg" alt="" />
+					</div>
+					<div class="sub-thumbnail flex-between">
+						<img src="./imgs/sub-1.png" alt="" />
+						<img src="./imgs/sub-2.png" alt="" />
+						<img src="./imgs/sub-3.png" alt="" />
+					</div>
+
+					<div class="collection-desc flex-between">
+						<h2>People</h2>
+						<p class="quantity">
+							<i class="fa-regular fa-file-image"></i>
+							<span class="quantity">144</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="collection-card">
+					<div class="main-thumbnail">
+						<img src="./imgs/main-thumbnail.jpg" alt="" />
+					</div>
+					<div class="sub-thumbnail flex-between">
+						<img src="./imgs/sub-1.png" alt="" />
+						<img src="./imgs/sub-2.png" alt="" />
+						<img src="./imgs/sub-3.png" alt="" />
+					</div>
+
+					<div class="collection-desc flex-between">
+						<h2>People</h2>
+						<p class="quantity">
+							<i class="fa-regular fa-file-image"></i>
+							<span class="quantity">144</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="collection-card">
+					<div class="main-thumbnail">
+						<img src="./imgs/main-thumbnail.jpg" alt="" />
+					</div>
+					<div class="sub-thumbnail flex-between">
+						<img src="./imgs/sub-1.png" alt="" />
+						<img src="./imgs/sub-2.png" alt="" />
+						<img src="./imgs/sub-3.png" alt="" />
+					</div>
+
+					<div class="collection-desc flex-between">
+						<h2>People</h2>
+						<p class="quantity">
+							<i class="fa-regular fa-file-image"></i>
+							<span class="quantity">144</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
