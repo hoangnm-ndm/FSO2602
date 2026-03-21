@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			li ~ li {
+				color: red;
+			}
+			/* +: Là phần tử em liền kề */
+			/* ~: Cứ là phần tử em, không cần liền kề */
+
+			p + h2 {
+				color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<ol>
+			<li>item-01</li>
+			<li>item-02</li>
+			<span>xen ngang</span>
+			<li>item-03</li>
+			<li>item-04</li>
+		</ol>
+
+		<p>Lorem ipsum dolor sit.</p>
+		<h2>title 2</h2>
+		<section>
+			<h2>title 22</h2>
+		</section>
+	</body>
+</html>

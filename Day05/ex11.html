@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			#desc {
+				color: yellowgreen;
+			}
+			div > div > div > p.paragraph {
+				color: orange;
+			}
+			p.paragraph {
+				color: violet;
+			}
+			.paragraph {
+				color: red !important;
+			}
+
+			/* * Nếu như có 1 bộ chọn mà thuộc tính được đánh dấu là !important thì sẽ không còn được tính theo độ ưu tiên mà win luôn! */
+			p {
+				color: green;
+				/* 0010 */
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div>
+				<div>
+					<p id="desc" class="paragraph">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+						similique.
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

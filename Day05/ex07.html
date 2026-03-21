@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.parent div:nth-of-type(2) {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+			<p>1. Lorem, ipsum dolor.</p>
+			<p>2. Lorem, ipsum dolor.</p>
+			<div>
+				<p>3. Lorem, ipsum dolor.</p>
+			</div>
+			<p>4. Lorem, ipsum dolor.</p>
+
+			<div>
+				<!-- color: có kế thừa -->
+				<p>5. Lorem, ipsum dolor.</p>
+				<span>hello</span>
+			</div>
+			<p>Lorem, ipsum dolor.</p>
+
+			<div>
+				<p>Lorem, ipsum dolor.</p>
+			</div>
+
+			<div>
+				<p>Lorem, ipsum dolor.</p>
+			</div>
+			<div>
+				<p>Lorem, ipsum dolor.</p>
+			</div>
+			<p>Lorem, ipsum dolor.</p>
+		</div>
+	</body>
+</html>

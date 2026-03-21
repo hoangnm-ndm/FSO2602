@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			p::before {
+				content: "";
+				width: 100px;
+				height: 6px;
+				display: inline-block;
+				background-color: #ccc;
+				border-radius: 50% 0 0 50%;
+			}
+
+			p::after {
+				content: "";
+				width: 100px;
+				height: 6px;
+				display: inline-block;
+				background-color: #ccc;
+				border-radius: 0 50% 50% 0;
+			}
+
+			p {
+				cursor: pointer;
+			}
+
+			p:hover::before,
+			p:hover::after {
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<p>slogan: Hoc, hoc nua, hoc mai!</p>
+	</body>
+</html>
