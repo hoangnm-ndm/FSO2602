@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Bài tập CSS Selector & Units</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Inter", Arial, sans-serif;
+			}
+
+			:root {
+				--color-ur: green;
+				--color-if: yellow;
+				--color-pr: violet;
+			}
+
+			body {
+				background-color: #ffffff;
+				display: flex;
+				justify-content: center;
+				padding: 60px 20px;
+			}
+
+			.main-title {
+				font-weight: 800;
+				font-size: 30px;
+				line-height: 36px;
+				letter-spacing: -0.75px;
+				vertical-align: middle;
+				margin-bottom: 30px;
+			}
+
+			.notification-list {
+				.notify-box {
+					padding: 32px;
+					margin-bottom: 20px;
+
+					.box-title {
+						font-weight: 700;
+						font-size: 20px;
+						color: #000000;
+						line-height: 28px;
+						letter-spacing: 0.075px;
+						vertical-align: middle;
+						margin-bottom: 10px;
+					}
+
+					.box-desc {
+						font-weight: 400;
+						font-size: 15px;
+						color: #4d4d4d;
+						line-height: 24.38px;
+						margin-bottom: 20px;
+					}
+				}
+			}
+
+			button {
+				padding: 10px 24px;
+				border-radius: 2px;
+				font-size: 13px;
+				font-weight: 700;
+				color: white;
+				border: 1px solid transparent;
+				cursor: pointer;
+			}
+
+			.status-urgent,
+			.status-info,
+			.status-promo {
+				border-radius: 10px;
+
+				.label {
+					display: inline-block;
+					font-weight: 700;
+					font-size: 12px;
+					line-height: 16px;
+					letter-spacing: 1.2px;
+					text-transform: uppercase;
+					margin-bottom: 10px;
+				}
+
+				.btn-detail {
+					&:hover {
+						background: #ffffff;
+					}
+				}
+			}
+
+			.status-urgent {
+				border: 1px solid var(--color-ur);
+
+				.label {
+					color: var(--color-ur);
+				}
+
+				.btn-detail {
+					background: var(--color-ur);
+
+					&:hover {
+						color: var(--color-ur);
+						border: 1px solid var(--color-ur);
+					}
+				}
+			}
+
+			.status-info {
+				border: 1px solid var(--color-if);
+
+				.label {
+					color: var(--color-if);
+				}
+
+				.btn-detail {
+					background: var(--color-if);
+
+					&:hover {
+						color: var(--color-if);
+						border: 1px solid var(--color-if);
+					}
+				}
+			}
+
+			.status-promo {
+				border: 1px solid var(--color-pr);
+
+				.label {
+					color: var(--color-pr);
+				}
+
+				.btn-detail {
+					background: var(--color-pr);
+
+					&:hover {
+						color: var(--color-pr);
+						border: 1px solid var(--color-pr);
+					}
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<main class="wrapper">
+			<h1 class="main-title">System Notifications</h1>
+
+			<section class="notification-list">
+				<article class="notify-box status-urgent">
+					<strong class="label">Urgent</strong>
+					<h2 class="box-title">Server Connection Error</h2>
+					<p class="box-desc">
+						The main server is undergoing emergency maintenance. Please try
+						again later.
+					</p>
+					<button class="btn-detail" type="button">View Details</button>
+				</article>
+
+				<article class="notify-box status-info">
+					<strong class="label">New Update</strong>
+					<h2 class="box-title">Feature Update 2.0</h2>
+					<p class="box-desc">
+						Version 2.0 is now live with significant improvements to the user
+						interface.
+					</p>
+					<button class="btn-detail" type="button">View Details</button>
+				</article>
+
+				<article class="notify-box status-promo">
+					<strong class="label">Promotion</strong>
+					<h2 class="box-title">Summer Sale</h2>
+					<p class="box-desc">
+						Use code SUMMER50 to get a 50% discount on all premium courses.
+					</p>
+					<button class="btn-detail" type="button">View Details</button>
+				</article>
+			</section>
+		</main>
+	</body>
+</html>

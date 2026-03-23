@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Bài tập CSS Selector & Units</title>
+		<!-- <link rel="stylesheet" href="style.css" /> -->
+		<style>
+      /* 
+      đã reset css 
+      tuy nhiên thì: 
+      Kích thước card chưa đúng với design
+      khoảng cách các phần tử chưa đúng với design
+      */
+      
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #fff;
+			}
+
+			.wrapper {
+				max-width: 100%;
+				margin: 0 215px 0 215px;
+				padding: 20px;
+			}
+
+			.main-title {
+				margin-bottom: 30px;
+			}
+
+			.notification-list {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+			}
+
+			.notify-box {
+				padding: 20px;
+				border-radius: 10px;
+				border: 2px solid;
+				background-color: #fff;
+				opacity: 0.95;
+				transition: 0.3s;
+			}
+
+			.notify-box:hover {
+				opacity: 100;
+				color: #ccc;
+			}
+
+			.label {
+				font-size: 12px;
+				font-weight: bold;
+				text-transform: uppercase;
+				display: inline-block;
+				margin-bottom: 10px;
+			}
+
+			.box-title {
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+
+			.box-desc {
+				font-size: 14px;
+				margin-bottom: 15px;
+				color: #555;
+			}
+
+			.btn-detail {
+				padding: 8px 14px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				font-size: 13px;
+			}
+
+			.status-urgent {
+				border-color: #e5484d;
+			}
+
+			.status-urgent .label {
+				color: #e5484d;
+			}
+
+			.status-urgent .btn-detail {
+				background-color: #e5484d;
+				color: #fff;
+			}
+
+			.status-info {
+				border-color: #3e9ad8;
+			}
+
+			.status-info .label {
+				color: #3e9ad8;
+			}
+
+			.status-info .btn-detail {
+				background-color: #3e9ad8;
+				color: #fff;
+			}
+
+			.status-promo {
+				border-color: #f59e0b;
+			}
+
+			.status-promo .label {
+				color: #f59e0b;
+			}
+
+			.status-promo .btn-detail {
+				background-color: #f59e0b;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<main class="wrapper">
+			<h1 class="main-title">System Notifications</h1>
+
+			<section class="notification-list">
+				<article class="notify-box status-urgent">
+					<strong class="label">Urgent</strong>
+					<h2 class="box-title">Server Connection Error</h2>
+					<p class="box-desc">
+						The main server is undergoing emergency maintenance. Please try
+						again later.
+					</p>
+					<button class="btn-detail" type="button">View Details</button>
+				</article>
+
+				<article class="notify-box status-info">
+					<strong class="label">New Update</strong>
+					<h2 class="box-title">Feature Update 2.0</h2>
+					<p class="box-desc">
+						Version 2.0 is now live with significant improvements to the user
+						interface.
+					</p>
+					<button class="btn-detail" type="button">View Details</button>
+				</article>
+
+				<article class="notify-box status-promo">
+					<strong class="label">Promotion</strong>
+					<h2 class="box-title">Summer Sale</h2>
+					<p class="box-desc">
+						Use code SUMMER50 to get a 50% discount on all premium courses.
+					</p>
+					<button class="btn-detail" type="button">View Details</button>
+				</article>
+			</section>
+		</main>
+	</body>
+</html>

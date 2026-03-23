@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Bài tập CSS Selector & Units</title>
+		<link rel="stylesheet" href="style.css" />
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			:root {
+			}
+
+			html {
+				/* 1. Layout & Positioning */
+
+				/* 2. Box Model */
+				width: 100%;
+				background-color: #f5f5f5;
+				/* 3. Typography */
+				font-family: "Inter", sans-serif;
+				/* 4. Visual */
+
+				/* 5. Misc */
+			}
+
+			body {
+				padding: 0 215px;
+
+				width: 1280px;
+				min-height: 1024px;
+				background-color: #fff;
+			}
+
+			.wrapper {
+				max-width: 850px;
+				padding: 64px 32px 120.87px 32px;
+			}
+
+			h1 {
+				vertical-align: middle;
+
+				font-weight: 800;
+				font-size: 30px;
+				line-height: 36px;
+				letter-spacing: -0.75px;
+			}
+
+			.status-urgent {
+				border: 1px solid #e5484d;
+
+				> button {
+					background-color: #e5484d;
+				}
+			}
+
+			.status-info {
+				border: 1px solid #3e9ad8;
+
+				> button {
+					background-color: #3e9ad8;
+				}
+			}
+
+			.status-promo {
+				border: 1px solid #f59e0b;
+
+				> button {
+					background-color: #f59e0b;
+				}
+			}
+
+			.notify-box {
+				width: 720px;
+				height: 164.38px;
+
+				border-radius: 12px;
+				padding: 32px;
+
+				vertical-align: middle;
+				font-weight: 700px;
+
+				.label {
+					font-size: 12px;
+					line-height: 16px;
+					letter-spacing: 1.2px;
+					text-transform: uppercase;
+				}
+
+				.box-title {
+					font-size: 20px;
+					line-height: 28px;
+				}
+
+				.box-desc {
+					font-weight: 400px;
+					font-size: 15px;
+					line-height: 24.38px;
+				}
+
+				.btn-detail {
+					padding: 10px 20px;
+					border-radius: 2px;
+					border: none;
+
+					font-weight: 600;
+					font-size: 14px;
+					line-height: 20px;
+					color: #fff;
+				}
+			}
+
+			.flex-col {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.gap-32 {
+				gap: 32px;
+			}
+
+			.gap-24 {
+				gap: 24px;
+			}
+
+			.gap-16 {
+				gap: 16px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<main class="wrapper flex-col gap-32">
+			<h1 class="main-title">System Notifications</h1>
+
+			<section class="notification-list flex-col gap-24">
+				<article class="notify-box status-urgent">
+					<strong class="label">Urgent</strong>
+					<h2 class="box-title">Server Connection Error</h2>
+					<p class="box-desc">
+						The main server is undergoing emergency maintenance. Please try
+						again later.
+					</p>
+					<button class="btn-detail" type="button">View Details</button>
+				</article>
+
+				<article class="notify-box status-info">
+					<strong class="label">New Update</strong>
+					<h2 class="box-title">Feature Update 2.0</h2>
+					<p class="box-desc">
+						Version 2.0 is now live with significant improvements to the user
+						interface.
+					</p>
+					<button class="btn-detail" type="button">View Details</button>
+				</article>
+
+				<article class="notify-box status-promo">
+					<strong class="label">Promotion</strong>
+					<h2 class="box-title">Summer Sale</h2>
+					<p class="box-desc">
+						Use code SUMMER50 to get a 50% discount on all premium courses.
+					</p>
+					<button class="btn-detail" type="button">View Details</button>
+				</article>
+			</section>
+		</main>
+	</body>
+</html>
