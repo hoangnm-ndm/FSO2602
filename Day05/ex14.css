@@ -1,0 +1,20 @@
+div {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	transition: all ease-in-out 0.5s;
+	-webkit-transition: all ease-in-out 0.5s;
+	-moz-transition: all ease-in-out 0.5s;
+	-ms-transition: all ease-in-out 0.5s;
+	-o-transition: all ease-in-out 0.5s;
+	transform: translate(-50%, 50%);
+	-webkit-transform: translate(-50%, 50%);
+	-moz-transform: translate(-50%, 50%);
+	-ms-transform: translate(-50%, 50%);
+	-o-transform: translate(-50%, 50%);
+}
+
+/* 
+* 1. CSS dài.
+* 2. Đa số các trình duyệt hiện đại luôn cố gắng bắt kịp các thuộc tính CSS mới - nên thuộc prefix hiện tại là không cần thiết.
+
+*/
