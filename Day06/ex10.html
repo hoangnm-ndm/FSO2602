@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flexbox Flex-shrink Example</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+			.container {
+				display: flex;
+				width: 400px;
+				background-color: #965151;
+				padding: 10px;
+				/* width: 100%; */
+				/* flex-wrap: wrap; */
+			}
+
+			.item {
+				background-color: #4caf50;
+				color: white;
+				padding: 20px;
+				margin: 5px;
+				font-size: 20px;
+				width: 200px;
+			}
+
+			.item-1 {
+				flex-shrink: 1; /* Co lại khi cần */
+			}
+
+			.item-2 {
+				flex-shrink: 2; /* Co lại nhiều hơn */
+			}
+
+			.item-3 {
+				flex-shrink: 0; /* Không co lại */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="item item-1">Item 1</div>
+			<div class="item item-2">Item 2</div>
+			<div class="item item-3">Item 3</div>
+		</div>
+	</body>
+</html>

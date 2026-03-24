@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flexbox Flex-grow Example</title>
+		<style>
+			.container {
+				display: flex;
+				background-color: #f0f0f0;
+				padding: 10px;
+			}
+
+			.item {
+				background-color: #4caf50;
+				color: white;
+				padding: 20px;
+				margin: 5px;
+				font-size: 20px;
+				/* width: 100px; */
+			}
+
+			.item-1 {
+				flex-grow: -1; /* Chiếm nhiều không gian hơn */
+			}
+
+			.item-2 {
+				flex-grow: 2; /* Chiếm gấp đôi không gian của item-1 */
+			}
+
+			.item-3 {
+				flex-grow: 1; /* Chiếm cùng không gian như item-1 */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="item item-1">Item 1</div>
+			<div class="item item-2">Item 2</div>
+			<div class="item item-3">Item 3</div>
+		</div>
+	</body>
+</html>

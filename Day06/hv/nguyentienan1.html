@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<style>
+			.container {
+				position: relative;
+				width: 300px;
+				height: 300px;
+				margin: 50px auto;
+				display: flex;
+			}
+
+			.circle {
+				position: absolute;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+			}
+
+			.c1 {
+				width: 150px;
+				height: 150px;
+				background-color: #ff5f5f;
+				top: 50px;
+				left: 20px;
+				z-index: 1;
+			}
+
+			.c2 {
+				width: 150px;
+				height: 150px;
+				background-color: #4facfe;
+				top: 50px;
+				left: 100px;
+				z-index: 2;
+			}
+
+			.c3 {
+				width: 150px;
+				height: 150px;
+				background-color: #43e97b;
+				top: 50px;
+				left: 180px;
+				z-index: 3;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="circle c1">1</div>
+			<div class="circle c2">2</div>
+			<div class="circle c3">3</div>
+		</div>
+	</body>
+</html>

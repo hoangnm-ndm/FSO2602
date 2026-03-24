@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.container {
+				position: relative;
+				width: 500px;
+				height: 500px;
+				background-color: red;
+			}
+
+			.child {
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				background-color: blue;
+			}
+
+			.box-2 {
+				right: 0;
+			}
+
+			.box-3 {
+				bottom: 0;
+			}
+
+			.box-4 {
+				bottom: 0;
+				right: 0;
+			}
+
+			.box-5 {
+				transform: translate(-50%, -50%);
+				top: 50%;
+				left: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="child box-1">1</div>
+			<div class="child box-2">2</div>
+			<div class="child box-3">3</div>
+			<div class="child box-4">4</div>
+			<div class="child box-5">5</div>
+		</div>
+	</body>
+</html>

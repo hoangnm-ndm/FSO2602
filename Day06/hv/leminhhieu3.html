@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.heart2 {
+				position: relative;
+				width: 100px;
+				height: 100px;
+				transform: rotate(-45deg);
+				background: red;
+				top: 200px;
+			}
+
+			.circle {
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				background: red;
+				border-radius: 50%;
+			}
+
+			.left {
+				top: -50px;
+				left: 0;
+			}
+
+			.right {
+				left: 50px;
+				top: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="heart2">
+			<div class="circle left"></div>
+			<div class="circle right"></div>
+		</div>
+	</body>
+</html>

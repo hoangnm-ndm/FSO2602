@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.container {
+				position: relative;
+				width: 200px;
+				height: 200px;
+				margin: 100px auto;
+			}
+
+			.square {
+				width: 90px;
+				height: 90px;
+				background: red;
+				position: absolute;
+				top: 36px;
+				left: 80px;
+				transform: rotate(45deg);
+				transform-origin: center;
+			}
+
+			.circle {
+				width: 100px;
+				height: 100px;
+				background: red;
+				border-radius: 50%;
+				position: absolute;
+			}
+			.left {
+				top: 0;
+				left: 50px;
+			}
+
+			.right {
+				top: 0;
+				left: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="square"></div>
+			<div class="circle left"></div>
+			<div class="circle right"></div>
+		</div>
+	</body>
+</html>

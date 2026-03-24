@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				background: #eee;
+			}
+
+			.box {
+				width: 300px;
+				height: 300px;
+				border: 2px solid red;
+				background-color: rgba(0, 128, 0, 0.3);
+				position: relative;
+				border-radius: 8px;
+			}
+
+			.small {
+				width: 70px;
+				height: 70px;
+				background-color: #d2b48c;
+				border: 2px solid red;
+				border-radius: 10px;
+				position: absolute;
+			}
+
+			/* 4 góc */
+			.top-left {
+				top: 10px;
+				left: 10px;
+			}
+
+			.top-right {
+				top: 10px;
+				right: 10px;
+			}
+
+			.bottom-left {
+				bottom: 10px;
+				left: 10px;
+			}
+
+			.bottom-right {
+				bottom: 10px;
+				right: 10px;
+			}
+
+			/* ở giữa */
+			.center {
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="small top-left"></div>
+			<div class="small top-right"></div>
+			<div class="small bottom-left"></div>
+			<div class="small bottom-right"></div>
+			<div class="small center"></div>
+		</div>
+	</body>
+</html>

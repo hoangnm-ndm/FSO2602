@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		.container {
+			width: 500px;
+			height: 500px;
+			background: green;
+			border: 2px solid red;
+			border-radius: 20px;
+			position: relative;
+
+			.item {
+				width: 80px;
+				height: 80px;
+				background-color: rgba(255, 0, 0, 0.342);
+				border: 2px solid red;
+				border-radius: 15px;
+				position: absolute;
+			}
+
+			.top-left {
+				top: 10px;
+				left: -3px;
+			}
+
+			.top-right {
+				top: 10px;
+				right: -3px;
+			}
+
+			.bottom-left {
+				bottom: 10px;
+				left: -3px;
+			}
+
+			.bottom-right {
+				bottom: 10px;
+				right: -3px;
+			}
+
+			.center {
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div class="item top-left"></div>
+			<div class="item top-right"></div>
+			<div class="item bottom-left"></div>
+			<div class="item bottom-right"></div>
+			<div class="item center"></div>
+		</div>
+	</body>
+</html>

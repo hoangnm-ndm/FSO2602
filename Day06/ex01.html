@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+
+			.box {
+				width: 200px;
+				height: 100px;
+				background-color: rgba(173, 216, 230, 0.525);
+
+				border: 2px solid blue;
+			}
+
+			.box-1 {
+				position: relative;
+				background-color: rgba(255, 0, 0, 0.6);
+				/* * Khi muốn điều khiển phần tử dịch chuyển dựa trên vị trí ban đầu của nó thì dùng relative, hoặc dùng để làm mốc toạ độ điều chỉnh cho phẩn tử con bên trong nó. */
+				/* 
+          Dù phần tử relative có dịch chuyển, nó không nhường chỗ cũ cho phần tử khác.
+        */
+				top: 300px;
+				left: 20px;
+				z-index: -1;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+			molestiae?
+		</p>
+		<div class="box box-1">Static Box 1</div>
+		<div class="box">Static Box 2</div>
+		<div class="box">Static Box 3</div>
+	</body>
+</html>
