@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+body {
+
+  background-color: #F3F8FF;
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F3F8FF;
+  height: 100vh;
+  position: relative;
+}
+
+/* .container::before {
+  content: "";
+  position: absolute;
+  width: 495px;
+  height: 495px;
+  background-image: url(../image/Ellipse2.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 1;
+
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%) rotate(16deg);
+
+  backdrop-filter: blur(144px);
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 670px;
+  height: 670px;
+  background-image: url(../image/Ellipse1.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 1;
+
+  top: 30%;
+  right: 10%;
+  transform: translate(50%, -50%) rotate(58deg);
+
+  backdrop-filter: blur(144px);
+} */
+
+
+.navbar-container {
+  width: 100%;
+  max-width: 1255px;
+  height: 178px;
+  padding: 15px;
+  margin: 0 auto;
+  /* position: absolute; */
+  background: #FFFFFF;
+  border-radius: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-main {
+  background: #F8F9FF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  height: 100%;
+  padding: 0 40px;
+  
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+.nav-item {
+  position: relative;
+  padding: 20px 25px;
+  border: 1px solid transparent;
+}
+
+.nav-item:hover {
+  background: #EFF1FF;
+  border-radius: 10px;
+  border: 1px solid #DDE1F9;
+}
+
+/* .nav-item:hover{
+ background-color: #DDE1F9;
+} */
+
+.nav-link {
+  text-decoration: none;
+  color: #0F0F34;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.mega-menu {
+  display: none;
+}
+
+.nav-item.active:hover .mega-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  min-width: 400px;
+  display: flex;
+  padding: 30px;
+  gap: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 25px 45px -15px #2D2D8C1A;
+  margin-top: 5px;
+  opacity: 1;
+  visibility: visible;
+  z-index: 3;
+}
+
+
+
+.menu-column {
+  flex: 1;
+}
+
+.column-title {
+  font-size: 11px;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.menu-list {
+  list-style: none;
+}
+
+.menu-list li {
+  margin-bottom: 12px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.menu-list a:hover {
+  display: inline-block;
+  background: #F8F9FF;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-login {
+  text-decoration: none;
+  color: #0F0F34;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn-signup {
+  text-decoration: none;
+  background-color: #0F0F34;
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 18px 25px 17px 30px;
+}

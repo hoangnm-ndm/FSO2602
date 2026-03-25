@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #0f0f34;
+    --accent-color: #eff1ff;
+    --border-soft: #dde1f9;
+    --bg-header: #f8f9ff;
+    --white: #fff;
+
+    --transition: all 0.3s ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+body {
+    padding: 0.84rem;
+    background: var(--accent-color);
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    padding: 0.94rem;
+    border-radius: 1.5625rem;
+    background-color: var(--white);
+    position: sticky;
+    top:0;
+
+}
+
+.content{
+    height: 120vh;
+}
+
+header {
+    border-radius: 1.5625rem;
+    background: var(--bg-header);
+    padding: 0 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 9.25rem;
+    top: 0;
+    left: 0;
+}
+
+.main-menu {
+    display: flex;
+    list-style: none;
+    & li {
+        padding: 1.25rem 1.56rem;
+        text-transform: uppercase;
+        border: 1px solid transparent;
+        transition: var(--transition);
+
+        &:hover {
+            border-radius: 0.9375rem;
+            border-color: var(--border-soft);
+            background: var(--accent-color);
+        }
+    }
+}
+
+.menu {
+    position: relative;
+    transition: var(--transition);
+    & .submenu {
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        display: flex;
+        opacity: 0;
+        /* visibility: hidden; */
+        gap: 4.06rem;
+        padding: 1.88rem 3.69rem 1.88rem 2.19rem;
+        background: var(--white);
+        border-radius: 0.9375rem;
+        box-shadow: 0 25px 45px -15px rgba(45, 45, 140, 0.1);
+        transition: inherit;
+    }
+
+    &:hover .submenu {
+        opacity: 1;
+        /* visibility: visible; */
+    }
+}
+
+.submenu > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.56rem;
+    & p {
+        color: #000;
+        font-size: 0.875rem;
+        font-weight: 700;
+        white-space: nowrap;
+        padding: 0.75rem 1.81rem 0.69rem 0.94rem;
+        transition: var(--transition);
+        &:not(:first-child):hover {
+            border-radius: 0.3125rem;
+            background: var(--bg-header);
+        }
+
+        &:first-child {
+            font-weight: 900;
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.auth {
+    & button {
+        font-size: 1rem;
+        padding: 1.12rem 1.56rem 1.06rem 1.88rem;
+        cursor: pointer;
+
+        &:first-child {
+            border: none;
+            background-color: transparent;
+        }
+
+        &:last-child {
+            border-radius: 0.3125rem;
+            background: var(--primary-color);
+            color: var(--white);
+        }
+    }
+}

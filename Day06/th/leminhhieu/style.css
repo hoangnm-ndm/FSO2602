@@ -1,0 +1,23 @@
+.navbar-container{
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 1225px;
+  margin: 0 auto;
+  height: 178px;
+
+  .mega-menu{
+    display: none;
+
+  }
+
+  .navbar-main{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding:  40px;
+    padding-right:200px;
+    align-items: center;
+  }
+}

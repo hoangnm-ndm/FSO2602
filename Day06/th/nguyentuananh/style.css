@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navbar-con-bg-color: #fff;
+    --navbar-con-border-color: #DDE1F9;
+    --navbar-con-bd-rd: 25px;
+
+    --navbar-main-bg-color: #F8F9FF;
+    --navbar-text-color: #0F0F34;
+
+    --login-text-color: #0F0F34;
+
+    --primary-ff: "Mulish", san-serif;
+    --primary-fw: 700;
+    --primary-fs: 16px;
+
+    --body-bg:#F3F8FF
+}
+
+html {
+    width: 100%;
+    font-family: var(--primary-ff);
+    font-weight: var(--primary-fw);
+    font-size: var(--primary-fs);
+}
+body{
+    background-color: var(--body-bg);
+}
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--navbar-text-color);
+}
+
+.navbar-container {
+    margin-top:394px;
+    position: fixed;
+    top: 0;
+    padding: 15px;
+    max-width: 1255px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width:90%;
+    border-radius: var(--navbar-con-bd-rd);
+    border: none;
+    background-color: var(--navbar-con-bg-color);
+}
+
+.navbar-main {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 47px 40px 46px;
+    border-radius: var(--navbar-con-bd-rd);
+    background-color: var(--navbar-main-bg-color);
+}
+
+.nav-links {
+    display: flex;
+
+    >li {
+        padding: 20px 25px;
+    }
+
+    >li:hover {
+        /* border: 1px solid var(--navbar-con-border-color); */
+        outline: 1px solid var(--navbar-con-border-color);
+        border-radius: 15px;
+        background-color: #EFF1FF;
+    }
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+
+    >a {
+        padding: 18px 25px;
+    }
+
+    .btn-signup {
+        border-radius: 5px;
+        background-color: #0F0F34;
+        color: #fff;
+    }
+}
+
+.mega-menu {
+    display: none;
+}

@@ -1,0 +1,119 @@
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 2000px;
+        display: flex;
+        justify-content: center;
+        background: #ededfa;
+        font-family: "Mulish";
+        color:#0F0F34;
+      }
+
+      .purple-color-on-hover {
+        --theme-color: #dde1f9;
+      }
+      .black-color-on-hover {
+        --theme-color: #000000c5;
+      }
+      .container {
+        position: fixed;
+      }
+      .navbar-container {
+        width: 1225px;
+        padding: 1rem;
+        background: #fff;
+        border-radius: 24px;
+      }
+
+      .navbar-main {
+        display: flex;
+        background: #f8f9ff;
+        border-radius: 1.5rem;
+        justify-content: space-between;
+        padding: 2.8rem 2.5rem;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+      }
+
+      .nav-item {
+        padding: 1.25rem 1.5rem;
+      }
+
+      .nav-item:hover {
+        border-radius: 20px;
+        background: var(--theme-color);
+      }
+
+      .nav-link,
+      .btn-login,
+      .btn-signup {
+        color: black;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .nav-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.875rem;
+        .btn-signup {
+          padding: 1.125rem 1.75rem;
+          color: #fff;
+          border-radius: 5px;
+          background-color: #000;
+        }
+      }
+
+      .nav-actions,
+      .btn-signup:hover {
+        cursor: pointer;
+        background-color: var(--theme-color);
+      }
+
+      .nav-item{
+        position: relative;
+      }
+
+      .mega-menu {
+        width: 389px;
+        height: 333px;
+        position: absolute;
+        left: 0;
+        top:50px;
+        display: none;
+        background: #fff;
+        padding: 2rem;
+        border-radius: 15px;
+      }
+
+      .nav-item:hover .mega-menu {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .menu-column {
+        .column-title {
+          font-size: 1rem;
+          font-weight: 900;
+        }
+
+        .menu-list {
+          list-style: none;
+          a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 18px;
+            font-weight: 700;
+          }
+        }
+      }
