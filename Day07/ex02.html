@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grid CSS</title>
+	</head>
+	<link rel="stylesheet" href="../common.css" />
+
+	<!-- *input/output -->
+	<!-- input: 3 hang x 4 cot -->
+	<style>
+		.container {
+			width: 100%;
+			border: 2px solid red;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: auto;
+			gap: 20px;
+		}
+
+		.item {
+			img {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div class="item">
+				<img src="./image.png" alt="" />
+				<h2>Ten san pham</h2>
+			</div>
+
+			<div class="item">
+				<img src="./image.png" alt="" />
+				<h2>Ten san pham</h2>
+			</div>
+
+			<div class="item">
+				<img src="./image.png" alt="" />
+				<h2>Ten san pham</h2>
+			</div>
+
+			<div class="item">
+				<img src="./image.png" alt="" />
+				<h2>Ten san pham</h2>
+			</div>
+
+			<div class="item">
+				<img src="./image.png" alt="" />
+				<h2>Ten san pham</h2>
+			</div>
+
+			<div class="item">
+				<img src="./image.png" alt="" />
+				<h2>Ten san pham</h2>
+			</div>
+
+			<div class="item">
+				<img src="./image.png" alt="" />
+				<h2>Ten san pham</h2>
+			</div>
+
+			<div class="item">
+				<img src="./image.png" alt="" />
+				<h2>Ten san pham</h2>
+			</div>
+
+			<div class="item">
+				<img src="./image.png" alt="" />
+				<h2>Ten san pham</h2>
+			</div>
+		</div>
+	</body>
+</html>

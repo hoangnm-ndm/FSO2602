@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grid CSS</title>
+	</head>
+	<link rel="stylesheet" href="../common.css" />
+
+	<!-- *input/output -->
+	<!-- input: 3 hang x 4 cot -->
+	<style>
+		.container {
+			width: 100%;
+			border: 2px solid red;
+			display: grid;
+			/* grid-template-columns: 100px 100px 100px 100px; */
+			grid-template-columns: repeat(4, 1fr);
+			/* 1fr = 1 fraction */
+			grid-template-rows: auto;
+			/* column-gap: 20px; */
+			/* row-gap: 50px; */
+			gap: 20px;
+		}
+
+		.item {
+			/* width: 80px; */
+			height: 80px;
+			background-color: violet;
+			border: 2px solid green;
+		}
+	</style>
+	<body>
+		<!-- ! Tư duy lưới quan tâm đến tổng quan bố cục nhiều hơn là kích thước chi tiết từng phần tử.  -->
+		<div class="container">
+			<div class="item">item-01</div>
+			<div class="item">item-02</div>
+			<div class="item">item-03</div>
+			<div class="item">item-04</div>
+			<div class="item">item-05</div>
+			<div class="item">item-06</div>
+			<div class="item">item-07</div>
+		</div>
+	</body>
+</html>

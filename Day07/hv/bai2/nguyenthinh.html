@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=., initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.container {
+				height: 100vh;
+				border: 2px solid red;
+				display: grid;
+				grid-template-columns: repeat(12, 1fr);
+				gap: 10px;
+			}
+			.item {
+				border: 2px dashed darkgreen;
+				background-color: aquamarine;
+			}
+			.item:nth-child(1) {
+				grid-column: span 12;
+			}
+			.item:nth-child(n + 2) {
+				grid-column: span 6;
+			}
+			.item:nth-child(n + 4) {
+				grid-column: span 4;
+			}
+			.item:nth-child(n + 7) {
+				grid-column: span 3;
+			}
+			.item:nth-child(n + 11) {
+				grid-column: span 2;
+			}
+			.item:nth-child(n + 17) {
+				grid-column: span 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="item">item-1</div>
+			<div class="item">item-2</div>
+			<div class="item">item-3</div>
+			<div class="item">item-4</div>
+			<div class="item">item-5</div>
+			<div class="item">item-6</div>
+			<div class="item">item-7</div>
+			<div class="item">item-8</div>
+			<div class="item">item-9</div>
+			<div class="item">item-10</div>
+			<div class="item">item-11</div>
+			<div class="item">item-12</div>
+			<div class="item">item-13</div>
+			<div class="item">item-14</div>
+			<div class="item">item-15</div>
+			<div class="item">item-16</div>
+			<div class="item">item-17</div>
+			<div class="item">item-18</div>
+			<div class="item">item-19</div>
+			<div class="item">item-20</div>
+			<div class="item">item-21</div>
+			<div class="item">item-22</div>
+			<div class="item">item-23</div>
+			<div class="item">item-24</div>
+			<div class="item">item-25</div>
+			<div class="item">item-26</div>
+			<div class="item">item-27</div>
+			<div class="item">item-28</div>
+		</div>
+	</body>
+</html>
