@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		.container-square {
+			position: relative;
+			width: 300px;
+			height: 300px;
+			border: 2px solid black;
+			margin: 50px auto;
+		}
+
+		.square-arrow {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			font-size: 24px;
+			color: blue;
+
+			animation: spin 4s linear infinite;
+			left: -10px;
+			top: -10px;
+		}
+
+		@keyframes spin {
+			0% {
+				left: -10px;
+				top: -10px;
+				transform: rotate(0deg);
+			}
+			25% {
+				left: 190px;
+				top: -10px;
+				transform: rotate(0deg);
+			}
+			25.01% {
+				transform: rotate(90deg);
+			}
+			50% {
+				left: 190px;
+				top: 190px;
+				transform: rotate(90deg);
+			}
+			50.01% {
+				transform: rotate(180deg);
+			}
+			75% {
+				left: -10px;
+				top: 190px;
+				transform: rotate(180deg);
+			}
+			75.01% {
+				transform: rotate(270deg);
+			}
+			100% {
+				left: -10px;
+				top: -10px;
+				transform: rotate(270deg);
+			}
+		}
+	</style>
+	<body>
+		<div class="container-square">
+			<div class="square-arrow">=></div>
+		</div>
+	</body>
+</html>
