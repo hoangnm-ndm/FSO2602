@@ -4,8 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Learn tailwind</title>
-		<script src="https://cdn.tailwindcss.com"></script>
-
+		<script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
 		<script>
 			tailwind.config = {
 				theme: {
@@ -28,8 +27,6 @@
 			};
 		</script>
 
-		<script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
-
 		<style type="text/tailwindcss">
 			@layer base {
 				h1 {
@@ -42,7 +39,7 @@
 
 			@layer components {
 				.btn {
-					@apply p-4 bg-[primary] text-white rounded;
+					@apply p-4 bg-primary text-white rounded;
 				}
 			}
 			@layer utilities {
@@ -65,11 +62,9 @@
 			</form>
 			<div class="card-group">
 				<div class="card">
-					<img
-						src="./assets/imgs//Users/phecode/Downloads/Furnite.svg.svg"
-						alt=""
-					/>
-					<p>Furniture</p>
+					<img src="./assets/imgs/furniture.svg" alt="" />
+					<p class="text-primary">Furniture</p>
+					<button class="border-2 border-primary rounded-md">click me</button>
 				</div>
 			</div>
 		</div>
