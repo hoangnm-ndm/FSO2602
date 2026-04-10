@@ -4,6 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Learn tailwind</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+			integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
 		<script>
 			tailwind.config = {
@@ -32,14 +39,22 @@
 				h1 {
 					@apply text-2xl font-bold;
 				}
+
+				input {
+					@apply rounded-md;
+				}
 				table {
-					@apply border-collapse;
+					@apply border-collapse border-primary;
 				}
 			}
 
 			@layer components {
 				.btn {
-					@apply p-4 bg-primary text-white rounded;
+					@apply p-2 bg-primary text-white rounded;
+				}
+
+				.card {
+					@apply hover:shadow-md border border-transparent border-solid hover:border-slate-300 transition rounded-xl text-center p-4;
 				}
 			}
 			@layer utilities {
@@ -52,19 +67,50 @@
 		<link rel="stylesheet" href="./assets/css/main.css" />
 	</head>
 	<body>
-		<div class="search-modal">
-			<form action="">
-				<div class="form-group">
-					<label for="search"> kinh lup </label>
-					<input type="text" id="search" />
+		<div
+			class="search-modal p-20 rounded border border-slate-300 w-[640px] mx-auto mt-16"
+		>
+			<form
+				action=""
+				class="flex gap-3 justify-between items-center mb-8 items-stretch"
+			>
+				<div class="form-group flex-1 items-center relative">
+					<label
+						for="search "
+						class="absolute top-1/2 left-[6px] -translate-y-1/2 z-10"
+						><i class="fa-solid fa-magnifying-glass"></i
+					></label>
+					<input
+						type="text"
+						class="search w-full border-gray-300 rounded-md z-0 pl-7"
+					/>
 				</div>
-				<button class="btn">Use map</button>
+				<button class="btn"><i class="fa-regular fa-map"></i> Use map</button>
 			</form>
-			<div class="card-group">
-				<div class="card">
-					<img src="./assets/imgs/furniture.svg" alt="" />
+			<div class="grid grid-cols-4 gap-4">
+				<div class="bg-[#FFECEC] card">
+					<img src="./assets/imgs/furniture.svg" alt="" class="mx-auto" />
 					<p class="text-primary">Furniture</p>
-					<button class="border-2 border-primary rounded-md">click me</button>
+				</div>
+
+				<div class="bg-[#FFECEC] card">
+					<img src="./assets/imgs/furniture.svg" alt="" class="mx-auto" />
+					<p class="text-primary">Furniture</p>
+				</div>
+
+				<div class="bg-[#FFECEC] card">
+					<img src="./assets/imgs/furniture.svg" alt="" class="mx-auto" />
+					<p class="text-primary">Furniture</p>
+				</div>
+
+				<div class="bg-[#FFECEC] card">
+					<img src="./assets/imgs/furniture.svg" alt="" class="mx-auto" />
+					<p class="text-primary">Furniture</p>
+				</div>
+
+				<div class="bg-[#FFECEC] card">
+					<img src="./assets/imgs/furniture.svg" alt="" class="mx-auto" />
+					<p class="text-primary">Furniture</p>
 				</div>
 			</div>
 		</div>
