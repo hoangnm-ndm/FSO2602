@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Learn tailwind</title>
+		<script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
+
+		<script src="./assets/tailwind.config.js"> </script>
+
+		<style type="text/tailwindcss">
+			@layer base {
+				h1 {
+					@apply text-2xl font-bold;
+				}
+				table {
+					@apply border-collapse;
+				}
+			}
+
+			@layer components {
+				.btn-primary {
+					@apply bg-gradient-to-r from-red-500 to-red-400 py-[12px] px-[12px] rounded-xl;
+				}
+
+				.btn-secondary {
+					@apply bg-blue-200 py-[12px] px-[12px] rounded-xl;
+				}
+
+				.header{
+					@apply flex justify-between px-[32px] py-[18px] w-full items-center;
+				}
+			}
+			@layer utilities {
+				.content-auto {
+					content-visibility: auto;
+				}
+			}
+			
+		</style>
+
+		<link rel="stylesheet" href="./assets/css/main.css" />
+	</head>
+	<body>
+		<div class="container mx-auto ">
+			<header class="header">
+				<div class="logo font-bold font-2xl">KINETIC COLLECTOR</div>
+				<nav>
+					<ul class="hidden lg:flex menu-links font-normal text-base text-black-500  gap-[32px]">
+						<li><a href="#" class="active">Figures</a></li>
+						<li><a href="#">Manga</a></li>
+						<li><a href="#">Rare Drops</a></li>
+						<li><a href="#">Auctions</a></li>
+						
+					</ul>
+				</nav>
+				<div class="action gap-3 hidden sm:flex">
+					<button class="btn-secondary">Login</button>
+					<button class="btn-primary">join Acution</button>
+				</div>
+			</header>
+		</div>
+	</body>
+</html>
