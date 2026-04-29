@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+// Lê Hinh Hiếu
+    //bai 5
+    function printSquareNumber(n) {
+      for (let i = 2; i * i <= n; i++) {
+        console.log(i * i);
+      }
+    }
+
+    printSquareNumber(10); // 4 9
+    console.log("-------------------");
+    printSquareNumber(20); // 4 9 16
+
+    //bai 6
+    console.log("-------------------");
+    function printPrimeNumber(n) {
+      // Xử lý và in ra kết quả
+      for (let i = 2; i <= n; i++) {
+
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+          if (i % j === 0) {
+            console.log(i);
+
+          }
+        }
+      }
+    }
+
+    // Output:
+    printPrimeNumber(10); // 2 3 5 7
+  </script>
+</body>
+
+</html>

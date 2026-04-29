@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bài 1</title>
+	</head>
+
+	<body>
+		<script>
+
+
+			const calculateElectricPrices = (electric) => {
+				if (isNaN(electric) || electric < 0) {
+					console.log("Số điện không hợp lệ");
+					return;
+				}
+				let orginalElectric = electric;
+				const electricPrices = [
+					{
+						step: 50,
+						price: 1500,
+					},
+					{ step: 50, price: 2000 },
+					{ step: 100, price: 3000 },
+					{ step: 150, price: 4000 },
+					{ step: Infinity, price: 5000 },
+				];
+
+				let money = 0;
+
+				for (let i = 0; i < electricPrices.length; i++) {
+					const { price, step } = electricPrices[i];
+					if (electric <= step) {
+						money = money + electric * price;
+						break;
+					} else {
+						money = money + price * step;
+						electric = electric - step;
+					}
+				}
+
+				console.log(
+					`Số tiền cần trả cho ${orginalElectric} la : ${money.toLocaleString()}đ`,
+				);
+
+				return money;
+			};
+
+
+			calculateElectricPrices(30); // Output: Số tiền cần trả: 45000đ
+			calculateElectricPrices(75); // Output: Số tiền cần trả: 125000đ
+			calculateElectricPrices(-10); // Output: Số điện không hợp lệ
+			calculateElectricPrices("abc"); // Output: Số điện không hợp lệ
+			calculateElectricPrices(350); //1,075,000đ
+			calculateElectricPrices(450); // 1,575,000đ
+		</script>
+	</body>
+</html>
