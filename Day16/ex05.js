@@ -13,4 +13,11 @@ console.log(arr.reverse());
  * Gợi ý: sử dụng split để chuyển chuỗi về mảng...
  */
 
-function isSymmetric(str) {}
+// * Nếu không dùng phương thức thì em có thể dùng vòng lặp từ i = 0 đến < length/2,
+// * arr[i] === arr[length - 1 - i] -> nếu có 1 cặp nào đó không bằng nhau thì return false, ngược lại return true.
+
+const isSymmetric = (str) => str === str.split("").reverse().join("");
+
+console.log(isSymmetric("HMH"));
+console.log(isSymmetric("HMN"));
+console.log(isSymmetric("abcba"));
