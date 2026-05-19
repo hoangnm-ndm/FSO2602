@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const students = [
+                { id: 1, name: 'Nguyen Van A', age: 20, score: 8.5 },
+                { id: 2, name: 'Le Thi B', age: 22, score: 7.0 },
+                { id: 3, name: 'Tran Van C', age: 19, score: 9.0 },
+                { id: 4, name: 'Pham Thi D', age: 21, score: 6.5 },
+            ];
+
+            const highestScore = Math.max(...students.map((stu) => stu.score));
+
+            const table = document.createElement('table');
+            document.body.append(table);
+
+            const headerHTML = `<tr>
+                        ${Object.keys(students[0])
+                            .map((title) => `<th>${title}</th>`)
+                            .join('')}
+                        </tr>`;
+
+            const data = students
+                .map((student) => {
+                    const style =
+                        student.score === highestScore
+                            ? 'style="color: red; font-weight: bold;"'
+                            : '';
+
+                    return `
+        <tr ${style}>
+            <td>${student.id}</td>
+            <td>${student.name}</td>
+            <td>${student.age}</td>
+            <td>${student.score}</td>
+        </tr>
+    `;
+                })
+                .join('');
+
+            table.innerHTML = headerHTML + data;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<ul class="list-x">
+			<li>item-01</li>
+			<li>item-02</li>
+
+			<li>item-03</li>
+			<li>item-04</li>
+			<!-- comment -->
+		</ul>
+
+		<script>
+			const ulEl = document.getElementsByTagName("ul")[0];
+			console.log(ulEl.innerText);
+			console.log(ulEl.innerHTML);
+			console.log(ulEl.outerHTML);
+			console.log(ulEl.outerText);
+			document.body.innerHTML = `
+			  <div>
+			        <h2>Vi du</h2>
+			  </div>
+			`;
+		</script>
+	</body>
+</html>

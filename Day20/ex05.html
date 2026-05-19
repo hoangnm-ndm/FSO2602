@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="myDiv" class="box red blue">Nội dung</div>
+
+		<script>
+			let div = document.getElementById("myDiv");
+
+			// Truy cập thuộc tính class của phần tử
+			console.log(div.className); // "box red"
+			console.log(div.classList); // DOMTokenList ["box", "red"]
+			div.classList.add("brown");
+			console.log(div.classList);
+			div.classList.remove("red");
+			div.classList.toggle("blue");
+			console.log(div.classList);
+		</script>
+	</body>
+</html>

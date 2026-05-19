@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Score</th>
+				</tr>
+			</thead>
+
+			<tbody></tbody>
+		</table>
+
+		<script>
+			const students = [
+				{ id: 1, name: "Nguyen Van A", age: 20, score: 8.5 },
+				{ id: 2, name: "Le Thi B", age: 22, score: 7.0 },
+				{ id: 3, name: "Tran Van C", age: 19, score: 9.0 },
+				{ id: 3, name: "Tran Van E", age: 19, score: 9.0 },
+				{ id: 4, name: "Pham Thi D", age: 21, score: 6.5 },
+			];
+
+			const maxScore = Math.max(...students.map((item) => item.score));
+
+			console.log(maxScore);
+
+			// * Dùng JS để tạo một bảng HTML hiển thị thông tin của các sinh viên trong mảng students. Bảng nên có các cột: ID, Name, Age, Score.
+			let html = "";
+			const tbody = document.querySelector("tbody");
+			students.forEach((item) => {
+				html += `
+      <tr  ${item.score === maxScore && `style="color:red"`} >
+        <td>${item.id}</td>
+        <td>${item.name}</td>
+        <td>${item.age}</td>
+        <td>${item.score}</td>
+      </tr>
+      `;
+			});
+			tbody.innerHTML = html;
+		</script>
+	</body>
+</html>

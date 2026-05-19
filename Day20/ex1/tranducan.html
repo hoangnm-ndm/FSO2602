@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			const students = [
+				{ id: 1, name: "Nguyen Van A", age: 20, score: 8.5 },
+				{ id: 2, name: "Le Thi B", age: 22, score: 7.0 },
+				{ id: 3, name: "Tran Van C", age: 19, score: 9.0 },
+				{ id: 4, name: "Pham Thi D", age: 21, score: 6.5 },
+			];
+
+			let html = ``;
+			let bestStudent = students[0];
+			students.forEach((item) => {
+				if (bestStudent.score < item.score) {
+					bestStudent = item;
+				}
+			});
+
+			students.forEach((item) => {
+				if (bestStudent === item) {
+					console.log("if");
+					html += `<tr>
+                    <td style="color: red; font-weight: 700">${item.id}</td>
+                    <td style="color: red; font-weight: 700">${item.name}</td>
+                    <td style="color: red; font-weight: 700">${item.age}</td>
+                    <td style="color: red; font-weight: 700">${item.score}</td>
+                  </tr>`;
+				} else {
+					console.log("else");
+					html += `<tr>
+                    <td>${item.id}</td>
+                    <td>${item.name}</td>
+                    <td>${item.age}</td>
+                    <td>${item.score}</td>
+                  </tr>`;
+				}
+			});
+			document.body.innerHTML = `<table class="myTable">
+                                    <tr>
+                                      <th>ID</th>
+                                      <th>Name</th>
+                                      <th>Age</th>
+                                      <th>Score</th>
+                                    </tr>
+                                    ${html}
+                                </table>`;
+
+			// * Dùng JS để tạo một bảng HTML hiển thị thông tin của các sinh viên trong mảng students. Bảng nên có các cột: ID, Name, Age, Score.
+			// * Bạn nào có điểm cao nhất thì text-color để màu đỏ và đậm cho cả dòng đó.
+		</script>
+	</body>
+</html>

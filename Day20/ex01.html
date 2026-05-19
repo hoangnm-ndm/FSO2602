@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Hello</h1>
+		<ul class="list-x">
+			<li>item-01</li>
+			<li>item-02</li>
+
+			<li>item-03</li>
+			<li>item-04</li>
+			<!-- dsdsd -->
+		</ul>
+		<script>
+			console.log({ document });
+			console.log(typeof document);
+
+			const myDocument = {
+				html: {
+					head: {
+						title: "abc",
+					},
+					body: {},
+				},
+			};
+			const h1Eles = document.getElementsByTagName("h1");
+			console.log(Array.isArray(h1Eles));
+
+			console.log(h1Eles[0].innerText);
+			// console.log(window);
+
+			h1Eles[0].innerText = "Bonjour!";
+
+			const liItem = document.querySelectorAll("ul>li");
+
+			console.log(liItem);
+			console.log(Array.isArray(liItem));
+
+			// for (let i = 0; i < liItem.length; i++) {
+			// 	console.log(liItem[i]);
+			// }
+
+			liItem.forEach((item) => console.log(item));
+		</script>
+	</body>
+</html>
