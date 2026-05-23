@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form id="myForm" action="/submit" method="POST">
+			<h1>Register</h1>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required minlength="5" />
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required />
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required />
+
+			<button>Submit</button>
+		</form>
+
+		<!-- // cache -->
+
+		<script>
+			const form = document.getElementById("myForm");
+
+			form.addEventListener("submit", function (event) {
+				event.preventDefault();
+				const formData = new FormData(form);
+				const data = Object.fromEntries(formData);
+				console.log(data);
+
+				localStorage.setItem("user", JSON.stringify(data));
+				form.reset();
+			});
+		</script>
+	</body>
+</html>

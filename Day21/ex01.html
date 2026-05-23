@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<button onclick="console.log('Xin chao!')">Click me!</button>
+		<h1 onclick="console.log(`h1 day`);">Hello</h1>
+		<button>Click me!</button>
+
+		<script>
+			const buttons = document.querySelectorAll("button");
+			// Cach 2: gắn sự kiện bằng javascript: gán method onclick với một lời khai báo hàm.
+			buttons[1].onclick = function () {
+				console.log("Xin chao, toi Hoang day!");
+			};
+
+			buttons[1].onclick = function () {
+				console.log("Xin chao, toi Le Minh Hieu day!");
+			};
+
+			// Cach 3: gan bang addEventListener: cho phép gán nhiều sự kiện cho một phần tử.
+
+			buttons[1].addEventListener("click", function () {
+				console.log(`Xin chao toi la Duc An day!`);
+			});
+
+			buttons[1].addEventListener("click", tuanAnhHello);
+
+			// decralation function có cơ chế hoisting: có thể gọi hàm trước khi khai báo.
+			function tuanAnhHello() {
+				console.log(`Xin chao toi la Tuan Anh day!`);
+			}
+
+			setTimeout(() => {
+				buttons[1].removeEventListener("click", tuanAnhHello);
+			}, 3000);
+		</script>
+	</body>
+</html>
