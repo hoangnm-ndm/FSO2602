@@ -1,0 +1,19 @@
+{
+	"name": "fso2602",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "json-server --watch db.json --port 3000"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hoangnm-ndm/FSO2602.git"
+	},
+	"author": "hoang-ndm",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/hoangnm-ndm/FSO2602/issues"
+	},
+	"homepage": "https://github.com/hoangnm-ndm/FSO2602#readme"
+}

@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "description": "Description for Product 1",
+      "price": 10.99
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "description": "Description for Product 2",
+      "price": 19.99
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "description": "Description for Product 3",
+      "price": 5.99
+    },
+    {
+      "id": 4
+    },
+    {
+      "name": "ao polo",
+      "price": "200",
+      "description": "mo ta",
+      "id": 5
+    },
+    {
+      "name": "them moi",
+      "price": "2090",
+      "description": "mo ta",
+      "id": 6
+    },
+    {
+      "name": "them moi san pham ipad pro 1000",
+      "price": "100000000",
+      "description": "mo ta",
+      "id": 7
+    }
+  ],
+  "users": []
+}

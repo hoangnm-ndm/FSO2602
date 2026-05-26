@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Danh sach san pham</h1>
+
+		<div class="products"></div>
+		<script>
+			const productsEle = document.querySelector(".products");
+			let content = "";
+			fetch("https://dummyjson.com/products", {
+				method: "GET",
+			})
+				.then((res) => {
+					console.log(res);
+					console.log(typeof res);
+					return res.json();
+				})
+				.then((data) => {
+					console.log(data);
+					data.products.forEach((item) => {
+						content += `
+              <div>
+                <h2>${item.title}</h2>
+                <img src="${item.thumbnail}" alt="" />
+              </div>
+            `;
+					});
+					productsEle.innerHTML = content;
+				})
+				.catch((error) => console.log(error))
+				.finally(() => {
+					console.log("ket thuc");
+				});
+		</script>
+	</body>
+</html>

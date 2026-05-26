@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form class="productForm">
+			<input type="text" placeholder="Name..." name="name" />
+			<input type="number" placeholder="Price..." name="price" />
+			<textarea placeholder="Description..." name="description"></textarea>
+			<button>Add new</button>
+		</form>
+
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Title</th>
+					<th>Price</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+
+			<tbody class="product-body"></tbody>
+		</table>
+
+		<script>
+			const urlAPI = "http://localhost:3000/products";
+			const productTable = document.querySelector(".product-body");
+
+			function renderUI() {
+				let content = "";
+				fetch(urlAPI, {
+					method: "GET",
+				})
+					.then((res) => res.json())
+					.then((data) => {
+						console.log(data);
+						data.forEach((item) => {
+							content += `
+              <tr>
+                <td>${item.id}</td>
+                <td>${item.name}</td>
+                <td>${item.price}</td>
+                <td>
+                  <button>Delete</button>
+                  <button>Update</button>
+                </td>
+              </tr>
+              `;
+						});
+
+						productTable.innerHTML = content;
+					});
+			}
+
+			const productForm = document.querySelector(".productForm");
+
+			productForm.addEventListener("submit", function () {
+				event.preventDefault();
+
+				const formData = new FormData(productForm);
+				const data = Object.fromEntries(formData);
+				console.log(data);
+
+				fetch(urlAPI, {
+					method: "POST",
+					body: JSON.stringify(data),
+					headers: { "Content-Type": "Application/json" },
+				})
+					.then((res) => res.json())
+					.then((data) => {
+						console.log(data);
+						renderUI();
+					});
+			});
+
+			renderUI();
+		</script>
+	</body>
+</html>

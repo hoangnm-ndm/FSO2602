@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="product-list">
+
+    </ul>
+    <script>
+      // https://api-prod.tokyolife.vn/cms-api/api/app/catalog/filter/ao-thun-va-polo-nam?page=1&is_update_price=true&per_page=30
+      // * Lấy 10 sản phẩm ở page 2, theo cách phân trang cứ 10 sản phẩm 1 trang và hiển thị tên sản phẩm lên màn hình bằng API phía trên.
+      let html = ``;
+      fetch(
+        "https://api-prod.tokyolife.vn/cms-api/api/app/catalog/filter/ao-thun-va-polo-nam?page=2&is_update_price=true&per_page=10",
+      )
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          const {products} = data.data.category.data
+          console.log();
+          products.forEach(product => {
+            html += `<li>${product.name}</li>`
+          })
+
+          document.querySelector(".product-list").innerHTML = html
+        });
+    </script>
+  </body>
+</html>

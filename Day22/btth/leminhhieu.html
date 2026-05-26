@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<h1>Danh sach san pham</h1>
+
+		<div class="products"></div>
+		<script>
+			const productsEle = document.querySelector(".products");
+
+			fetch(
+				"https://api-prod.tokyolife.vn/cms-api/api/app/catalog/filter/ao-thun-va-polo-nam?page=2&is_update_price=true&per_page=10",
+				{
+					method: "GET",
+				},
+			)
+				.then((res) => res.json())
+				.then((data) => {
+					console.log(data);
+					const dataProduct = data.data.category.data.products.map((item) => {
+						return `
+              <div>
+                <h2>${item.name}</h2>
+                <img src="${item.thumbnail}" alt=""/>
+              </div>
+            `;
+					});
+					productsEle.innerHTML = dataProduct;
+				})
+				.catch((error) => console.log(error))
+				.finally(() => {
+					console.log("ket thuc");
+				});
+		</script>
+	</body>
+</html>
