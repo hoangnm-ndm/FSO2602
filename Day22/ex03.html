@@ -3,28 +3,109 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Product App</title>
+
+		<!-- BOOTSTRAP -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+
+		<style>
+			body {
+				background: #f8f9fa;
+				font-family: "Inter", sans-serif;
+				padding: 40px;
+			}
+
+			.card {
+				border-radius: 12px;
+			}
+
+			h2 {
+				color: #0d6efd;
+				font-weight: 600;
+			}
+
+			table {
+				margin-top: 25px;
+			}
+
+			th {
+				background: #0d6efd;
+				color: white;
+			}
+
+			.btn-primary {
+				background-color: #0d6efd;
+				border: none;
+			}
+
+			.btn-danger,
+			.btn-warning {
+				padding: 2px 12px;
+			}
+
+			.wrapper {
+				max-width: 750px;
+				margin: 0 auto;
+			}
+		</style>
 	</head>
+
 	<body>
-		<form class="productForm">
-			<input type="text" placeholder="Name..." name="name" />
-			<input type="number" placeholder="Price..." name="price" />
-			<textarea placeholder="Description..." name="description"></textarea>
-			<button>Add new</button>
-		</form>
+		<div class="wrapper">
+			<h2 class="mb-4 text-center">Product Manager</h2>
 
-		<table>
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Title</th>
-					<th>Price</th>
-					<th>Action</th>
-				</tr>
-			</thead>
+			<div class="p-4 shadow card">
+				<form class="productForm">
+					<div class="mb-3">
+						<label class="form-label">Product name</label>
+						<input
+							type="text"
+							class="form-control"
+							name="name"
+							placeholder="Name..."
+							required
+						/>
+					</div>
 
-			<tbody class="product-body"></tbody>
-		</table>
+					<div class="mb-3">
+						<label class="form-label">Price</label>
+						<input
+							type="number"
+							class="form-control"
+							name="price"
+							placeholder="Price..."
+							required
+						/>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Description</label>
+						<textarea
+							class="form-control"
+							name="description"
+							placeholder="Description..."
+						></textarea>
+					</div>
+
+					<button class="btn btn-primary w-100">Add New</button>
+				</form>
+			</div>
+
+			<table class="table mt-4 shadow table-striped table-bordered">
+				<thead>
+					<tr class="text-center">
+						<th>ID</th>
+						<th>Title</th>
+						<th>Price</th>
+						<th width="150px">Action</th>
+					</tr>
+				</thead>
+				<tbody class="text-center product-body"></tbody>
+			</table>
+		</div>
 
 		<script>
 			const urlAPI = "http://localhost:3000/products";
@@ -32,25 +113,25 @@
 
 			function renderUI() {
 				let content = "";
-				fetch(urlAPI, {
-					method: "GET",
-				})
+				fetch(urlAPI)
 					.then((res) => res.json())
 					.then((data) => {
-						console.log(data);
-						data.forEach((item) => {
-							content += `
-              <tr>
-                <td>${item.id}</td>
-                <td>${item.name}</td>
-                <td>${item.price}</td>
-                <td>
-                  <button>Delete</button>
-                  <button>Update</button>
-                </td>
-              </tr>
+						data.length > 0
+							? data.forEach((item) => {
+									content += `
+                <tr>
+                  <td>${item.id}</td>
+                  <td>${item.name}</td>
+                  <td>${item.price}</td>
+                  <td>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                    <button class="btn btn-warning btn-sm">Update</button>
+                  </td>
+                </tr>
               `;
-						});
+							  })
+							: (content += `<tr>
+                  <td colspan = "4">Không có sản phẩm nào</td> </tr>`);
 
 						productTable.innerHTML = content;
 					});
@@ -58,22 +139,21 @@
 
 			const productForm = document.querySelector(".productForm");
 
-			productForm.addEventListener("submit", function () {
+			productForm.addEventListener("submit", function (event) {
 				event.preventDefault();
 
 				const formData = new FormData(productForm);
 				const data = Object.fromEntries(formData);
-				console.log(data);
 
 				fetch(urlAPI, {
 					method: "POST",
 					body: JSON.stringify(data),
-					headers: { "Content-Type": "Application/json" },
+					headers: { "Content-Type": "application/json" },
 				})
 					.then((res) => res.json())
-					.then((data) => {
-						console.log(data);
+					.then(() => {
 						renderUI();
+						productForm.reset();
 					});
 			});
 
