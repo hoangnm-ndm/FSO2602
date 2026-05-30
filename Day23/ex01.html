@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function taskA(callback) {
+				setTimeout(() => {
+					console.log("task A");
+					callback();
+				}, 3000);
+			}
+
+			function taskB(callback) {
+				setTimeout(() => {
+					console.log("task B");
+					callback();
+				}, 2000);
+			}
+
+			function taskC(callback) {
+				setTimeout(() => {
+					console.log("task C");
+					callback();
+				}, 1000);
+			}
+
+			console.time("test");
+			taskA(() =>
+				taskB(() =>
+					taskC(() => {
+						console.log("xong het roi!");
+						console.timeEnd("test");
+					}),
+				),
+			);
+		</script>
+	</body>
+</html>
